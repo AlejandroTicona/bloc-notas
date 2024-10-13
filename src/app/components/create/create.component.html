@@ -1,1 +1,37 @@
-<p>create works!</p>
+<div>
+  <h2 class="text-center">Crear nueva nota</h2>
+  <form (ngSubmit)="createNew()" class="mb-3 createForm">
+    <label for="Title">Titulo</label>
+    <input
+      type="text"
+      id="title"
+      class="input-group mb-3"
+      [(ngModel)]="newNote.title"
+      name="title"
+      required
+    />
+
+    <label for="Description">Descripción: </label>
+    <textarea
+      id="description"
+      class="input-group mb-3"
+      [(ngModel)]="newNote.description"
+      name="title"
+      required
+    >
+</textarea>
+
+    <label for="color">Color</label>
+    <input
+      type="text"
+      id="color"
+      class="input-group mb-3"
+      [(ngModel)]="newNote.color"
+      name="color"
+      required
+    />
+
+    <button type="submit">Crear</button>
+    <button (click)="goBack()">Atrás</button>
+  </form>
+</div>

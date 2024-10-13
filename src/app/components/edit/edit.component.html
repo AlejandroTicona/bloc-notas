@@ -1,1 +1,38 @@
-<p>edit works!</p>
+<div>
+    <h2 class="text-center">Editar Nota</h2>
+    <form (ngSubmit)="update()" class="mb-3 createForm">
+      <label for="Title">Titulo</label>
+      <input
+        type="text"
+        id="title"
+        class="input-group mb-3"
+        [(ngModel)]="note.title"
+        name="title"
+        required
+      />
+  
+      <label for="Description">Descripción: </label>
+      <textarea
+        id="description"
+        class="input-group mb-3"
+        [(ngModel)]="note.description"
+        name="title"
+        required
+      >
+  </textarea>
+  
+      <label for="color">Color</label>
+      <input
+        type="text"
+        id="color"
+        class="input-group mb-3"
+        [(ngModel)]="note.color"
+        name="color"
+        required
+      />
+  
+      <button type="submit">Actualizar</button>
+      <button (click)="goBack()">Atrás</button>
+    </form>
+  </div>
+  
